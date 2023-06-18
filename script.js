@@ -17,10 +17,10 @@ function initBoard() {
         let row = document.createElement("div")
         row.className = "letter-row"
         
-        for (let j = 0; j < 5; j++) {
-            let box = document.createElement("div")
-            box.className = "letter-box"
-            row.appendChild(box)
+    for (let j = 0; j < 5; j++) {
+        let box = document.createElement("div")
+        box.className = "letter-box"
+        row.appendChild(box)
         }
 
         board.appendChild(row)
@@ -28,4 +28,34 @@ function initBoard() {
 }
 
 initBoard()
+
+// function for user input 
+document.addEventListener("keypress", (event) => {
+    if (guessesRemaining === 0) {
+      return;
+    }
+  
+    let pressedKey = String(event.key);
+  
+    if (pressedKey === "Backspace" && nextLetter !== 0) {
+      deleteLetter();
+      return;
+    }
+  
+    if (pressedKey === "Enter") {
+      checkGuess();
+      return;
+    };
+
+    let randomLetter = currentWord.charAt(nextLetter); 
+
+    if (pressedKey !== randomLetter) {
+    return;
+  }
+  
+    insertLetter(pressedKey);
+})
+
+
+
 
