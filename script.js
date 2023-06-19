@@ -1,11 +1,10 @@
 // Words are fetched from the URL's list. Whitespace is trimmed and the list of words are converted into an array. 
 
-const wordsListUrl = 'https://www-cs-faculty.stanford.edu/~knuth/sgb-words.txt';
+const wordsListUrl ='https://www-cs-faculty.stanford.edu/~knuth/sgb-words.txt';
 let words = [];
 
-
 if (typeof window !== 'undefined') {
-    console.log('You are on the browswer')
+    console.log('You are on the browser')
     console.log(document.title)
     console.log(document.getElementById('wordle-container'))
 }
@@ -106,4 +105,4 @@ function deleteLetter () {
     currentGuess.pop()
     nextLetter -= 1
 }
-})
+}); 
