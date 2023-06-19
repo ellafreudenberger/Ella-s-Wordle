@@ -1,33 +1,32 @@
-// Words are fetched from the URL's list. Whitespace is trimmed and the list of words are converted into an array. 
-
-const wordsListUrl ='https://www-cs-faculty.stanford.edu/~knuth/sgb-words.txt';
 let words = [];
 
 if (typeof window !== 'undefined') {
-    console.log('You are on the browser')
-    console.log(document.title)
-    console.log(document.getElementById('wordle-container'))
+  console.log('You are on the browser');
+  console.log(document.title);
+  console.log(document.getElementById('wordle-container'));
 }
 
-async function fetchWordsFromWebsite() {
-  try {
-    const response = await fetch(wordsListUrl, {
-      mode: 'cors', // set the mode to 'cors'
+function fetchDataFromFile() {
+  return fetch('assets/words-list')
+    .then(response => response.text())
+    .then(data => {
+      const dataArray = data.split('\n');
+      return dataArray;
+    })
+    .catch(error => {
+      console.error('Error fetching file:', error);
+      return [];
     });
-    const text = await response.text();
-    words = convertToWordArray(text); // assigns the fetched words to the global words variable
+}
+
+// Usage
+fetchDataFromFile()
+  .then(dataArray => {
+    words = dataArray;
     console.log(words);
-  } catch (error) {
-    console.error('Error fetching words:', error);
-  }
-}
-
-function convertToWordArray(words) {
-  return words.trim().split('\n');
-}
-
-// calls fetchWordsFromWebsite to fetch the words
-fetchWordsFromWebsite().then(() => {
+    // Continue with your code that depends on the words array
+    initBoard();
+  });
 
 // function to set up guessing
 const totalGuesses = 6; 
@@ -41,7 +40,7 @@ console.log(correctGuessString)
 function initBoard() {
     let board = document.getElementById("game-board");
 
-    for (let i = 0; i <totalGuesses; i++) {
+    for (let i = 0; i < 6; i++) {
         let row = document.createElement("div")
         row.className = "letter-row"
         
@@ -105,4 +104,4 @@ function deleteLetter () {
     currentGuess.pop()
     nextLetter -= 1
 }
-}); 
+
