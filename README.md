@@ -14,3 +14,11 @@ User Directions:
 5. If all 5 letters guessed result in green tiles, then the right word has been guessed successfully. 
 
 Tip: Do not waste a guess on the same word twice in 1 game or on a word that doesn’t exist in the Oxford English Dictionary. New functions will be implemented on the next game update to block these guesses and improve the user-experience. 
+
+
+Coding Sources: 
+
+(2020, February 11). Z Index in CSS: What it Is and What it Does. Free Code Camp. https://www.freecodecamp.org/news/z-index-in-css-what-it-is-and-what-it-does/#:~:text=Z%20Index%20(%20z%2Dindex%20),%2C%20or%20position%3Afixed%20).
+
+(2020, March 1). How to Build a Wordle Clone in JavaScript. Free Code Camp. https://www.freecodecamp.org/news/build-a-wordle-clone-in-javascript/
+
