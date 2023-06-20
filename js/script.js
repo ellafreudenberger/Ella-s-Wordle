@@ -7,7 +7,7 @@ if (typeof window !== 'undefined') {
 }
 
 function fetchDataFromServer() {
-  return fetch('http://127.0.0.1:8080')
+  return fetch('')
     .then(response => response.text())
     .then(data => {
       const dataArray = data.split('\n');
