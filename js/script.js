@@ -36,6 +36,7 @@ fetchDataFromServer()
     let correctGuessString = words[Math.floor(Math.random() * words.length)];
     console.log(correctGuessString);
 
+
     // creating the game board with rows and boxes
     function initBoard() {
       let board = document.getElementById("game-board");
@@ -59,18 +60,17 @@ fetchDataFromServer()
       const keys = document.querySelectorAll('.key');
       keys.forEach(elem => {
         if (elem.textContent === letter) {
-          let oldColor = elem.style.backgroundColor;
-          if (oldColor === 'rgb(85, 125, 47)') {
+          if (elem.style.backgroundColor === 'rgb(85, 125, 47)') {
             return;
           }
-          if (oldColor === 'rgb(212, 175, 55)' && color !== 'rgb(85, 125, 47)') {
+          if (elem.style.backgroundColor === 'rgb(240, 188, 98)' && color !== 'rgb(85, 125, 47)') {
             return;
           }
           elem.style.backgroundColor = color;
         }
       });
-    } 
-
+    }
+    
     colorKeyboardBox ();
 
     // function clears the box text content, removes any visual indication that boxes were previously filled, removes the last element from the currentGuess array, and deletes previously entered letters
@@ -88,12 +88,12 @@ fetchDataFromServer()
       nextLetter -= 1;
     }
 
-    //
+    // .join method makes the currentGuess a string, correctGuessString is converted into an array of selected letters, function iterates over letters of the user's guess and compares them with the letters in correct guess, lettrs in correct position become green, correct letters in wrong positions become yellow, null determines if the letter has already been matched, loop terminated when i=5 or j=5
     function checkGuess() {
       const row = document.getElementsByClassName('letter-row')[6 - guessesRemaining];
       const guessString = currentGuess.join("");
       const rightGuess = Array.from(correctGuessString);
-      const letterColor = Array(5).fill("grey");
+      const letterColor = Array(5).fill("rgb(170, 85, 70)");
     
       if (guessString.length !== 5) {
         return;
@@ -102,12 +102,12 @@ fetchDataFromServer()
       for (let i = 0; i < 5; i++) {
         if (rightGuess[i] === currentGuess[i]) {
           letterColor[i] = "rgb(85, 125, 47)";
-          rightGuess[i] = "#";
+          rightGuess[i] = "null";
         } else
           for (let j = 0; j < 5; j++)
             if (rightGuess[j] === currentGuess[i] && letterColor[j] !== "rgb(85, 125, 47)") {
-              letterColor[i] = "rgb(212, 175, 55)";
-              rightGuess[j] = "#";
+              letterColor[i] = "rgb(240, 188, 98)";
+              rightGuess[j] = "null";
               break;
             }
       }
@@ -115,13 +115,14 @@ fetchDataFromServer()
       for (let i = 0; i < 5; i++) {
         let box = row.children[i];
         let delay = 250 * i;
-    
+      
         setTimeout(() => {
-          animateCSS(box, "flipInX");
+          box.style.transition = ''; 
           box.style.backgroundColor = letterColor[i];
-          shadeKeyBoard(guessString.charAt(i), letterColor[i]);
+          colorKeyboardBox(guessString.charAt(i), letterColor[i]);
         }, delay);
       }
+      
     
       if (guessString === correctGuessString) {
         guessesRemaining = 0;
