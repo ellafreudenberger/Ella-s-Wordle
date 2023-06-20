@@ -88,7 +88,7 @@ fetchDataFromServer()
       nextLetter -= 1;
     }
 
-    // .join method makes the currentGuess a string, correctGuessString is converted into an array of selected letters, function iterates over letters of the user's guess and compares them with the letters in correct guess, lettrs in correct position become green, correct letters in wrong positions become yellow, null determines if the letter has already been matched, loop terminated when i=5 or j=5
+    // .join method makes the currentGuess a string, correctGuessString is converted into an array of selected letters, function iterates over letters of the user's guess and compares them with the letters in correct guess, letters in correct position become green, correct letters in wrong positions become yellow, null determines if the letter has already been matched, loop terminated when i=5 or j=5
     function checkGuess() {
       const row = document.getElementsByClassName('letter-row')[6 - guessesRemaining];
       const guessString = currentGuess.join("");
@@ -115,15 +115,15 @@ fetchDataFromServer()
       for (let i = 0; i < 5; i++) {
         let box = row.children[i];
         let delay = 250 * i;
-      
+
+        // delays this animation to change backgroundColor of box in accordance with the value guessed at the index of the letterColor array
         setTimeout(() => {
-          box.style.transition = ''; 
           box.style.backgroundColor = letterColor[i];
           colorKeyboardBox(guessString.charAt(i), letterColor[i]);
         }, delay);
       }
       
-    
+      // checks if the guessString variable is equal to the correctGuessString variable, and if this is true, then no more guesses are needed
       if (guessString === correctGuessString) {
         guessesRemaining = 0;
         return;
@@ -134,21 +134,22 @@ fetchDataFromServer()
       nextLetter = 0;
     }
     
-    //
+    // only 5 letters can be entered, determine the row index, the value of nextLetter and column index for placement, .children is used to select a specific child element based on the index provided by nextLetter
     function insertLetter(pressedKey) {
       if (nextLetter >= 5) return;
     
       const box = document.getElementsByClassName("letter-row")[6 - guessesRemaining].children[nextLetter];
       
-      box.textContent = pressedKey.toLowerCase();
+    //adds css styling to box element
+      box.textContent = pressedKey;
       box.classList.add("filled-box");
       
-      currentGuess.push(pressedKey.toLowerCase());
+      currentGuess.push(pressedKey);
       nextLetter++;
     }
     
 
-    //
+    // keyup is for when the key is release the eventListener function follows for deleting letters, checking guesses and entering letters into the board
     document.addEventListener("keyup", (e) => {
       if (guessesRemaining === 0) {
         return;
@@ -165,24 +166,30 @@ fetchDataFromServer()
         return;
       }
 
+    //&& means true only if both expressions are true
       if (pressedKey.match(/[a-z]/gi) && pressedKey.length === 1) {
         insertLetter(pressedKey);
       }  
     });
 
-    //
+    //target element of the click event is assigned to target
     document.getElementById("key-board").addEventListener("click", (e) => {
       const target = e.target;
 
+
+    //checks for which will have css styling applied
       if (!target.classList.contains("key")) {
         return;
       }
+
+    //assigns text content of click event to key
       let key = target.textContent;
 
+    //connects delete key with the action of backspace
       if (key === "Del") {
         key = "Backspace";
       }
-
+    //keyup event triggered
       document.dispatchEvent(new KeyboardEvent("keyup", { key }));
     });
 
