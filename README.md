@@ -6,6 +6,7 @@ The words-list used to generate random words for the user to guess is imported f
 
 
 User Directions: 
+(Background music can be turned on and off with your computer spacebar) 
 
 1. Guess the 5 letter word in 6 guesses. 
 2. If a letter guessed results in a yellow tile, then the letter is in the wrong order of the right word answer. 
