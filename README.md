@@ -15,6 +15,8 @@ User Directions:
 
 Tip: Do not waste a guess on the same word twice in 1 game or on a word that doesn’t exist in the Oxford English Dictionary. New functions will be implemented on the next game update to block these guesses and improve the user-experience. 
 
+Next update will include features for the game to be played on a touch screen phone. 
+
 
 Coding Sources: 
 
@@ -22,3 +24,4 @@ Coding Sources:
 
 (2020, March 1). How to Build a Wordle Clone in JavaScript. Free Code Camp. https://www.freecodecamp.org/news/build-a-wordle-clone-in-javascript/
 
+(n.d.). Array.Prototype.Join(). Mozilla. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
