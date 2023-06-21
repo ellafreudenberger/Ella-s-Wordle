@@ -6,6 +6,7 @@ The words-list used to generate random words for the user to guess is imported f
 
 
 User Directions: 
+(Background music can be turned on and off with your computer spacebar) 
 
 1. Guess the 5 letter word in 6 guesses. 
 2. If a letter guessed results in a yellow tile, then the letter is in the wrong order of the right word answer. 
@@ -25,3 +26,7 @@ Coding Sources:
 (2020, March 1). How to Build a Wordle Clone in JavaScript. Free Code Camp. https://www.freecodecamp.org/news/build-a-wordle-clone-in-javascript/
 
 (n.d.). Array.Prototype.Join(). Mozilla. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+
+(n.d.). Java String charAt(). Java T Point. https://www.javatpoint.com/java-string-charat
+
+(n.d.). How to toggle audio play() pause() with one button or link? Stack Overflow. https://stackoverflow.com/questions/27368778/how-to-toggle-audio-play-pause-with-one-button-or-link
