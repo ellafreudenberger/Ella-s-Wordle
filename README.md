@@ -27,3 +27,5 @@ Coding Sources:
 (n.d.). Array.Prototype.Join(). Mozilla. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
 
 (n.d.). Java String charAt(). Java T Point. https://www.javatpoint.com/java-string-charat
+
+(n.d.). How to toggle audio play() pause() with one button or link? Stack Overflow. https://stackoverflow.com/questions/27368778/how-to-toggle-audio-play-pause-with-one-button-or-link
