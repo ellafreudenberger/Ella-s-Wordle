@@ -200,3 +200,20 @@ fetchDataFromServer()
     initBoard();
   });
 
+//turn background music on and off with computer spacebar (n.d.). How to toggle audio play() pause() with one button or link? Stack Overflow. https://stackoverflow.com/questions/27368778/how-to-toggle-audio-play-pause-with-one-button-or-link
+const audio = document.getElementById("music"); 
+ 
+function toggleMusic() {
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+}
+
+document.addEventListener("keydown", function (event) {
+  if (event.code === "Space") {
+    toggleMusic();
+  }
+});
+ 
