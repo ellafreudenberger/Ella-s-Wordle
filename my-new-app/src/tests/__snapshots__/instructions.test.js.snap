@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders instructions component snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="fade alert alert-success show"
+    role="alert"
+  >
+    <div
+      class="alert-heading h4"
+    >
+      Instructions 
+    </div>
+    <p>
+      Guess the 5 letter word in 6 guesses. If a letter guessed results in a yellow tile, then the letter is in the wrong order of the right word answer. If a letter guessed results in a green tile, then the letter is in the correct order of the right word answer. If a letter guessed results in a red tile, then the letter is not in the right word answer. If all 5 letters guessed result in green tiles, then the right word has been guessed successfully.
+    </p>
+    <hr />
+    <p
+      class="mb-0"
+    >
+      Good luck!
+    </p>
+  </div>
+</DocumentFragment>
+`;
