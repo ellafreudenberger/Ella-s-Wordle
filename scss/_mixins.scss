@@ -1,0 +1,21 @@
+
+// Reset Margins, Paddings, and Box-Sizing Mixin
+@mixin reset-box-model {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+// Flex Display Mixin
+@mixin flex-display($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+  }
+
+// Border Mixin
+@mixin border($width: 0.3vh, $style: solid, $color: rgb(238, 200, 163)) {
+    border: $width $style $color;
+  }
+  
