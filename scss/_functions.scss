@@ -1,0 +1,12 @@
+// Round Number Function
+
+@function round-number($value) {
+    @return round($value);
+  }
+
+// Alpha Transparency Function
+
+$original-color: rgb(211, 188, 168);
+
+$adjusted-color: rgba($original-color, 3); // transparency added
+

@@ -43,7 +43,7 @@ body #wordle-container header h2 {
   margin-top: 3%;
   color: rgb(18, 22, 105);
 }
-body #wordle-container header h3 {
+body #wordle-container header h3.directions {
   font-family: "Font Name", Helvetica, sans-serif;
   font-size: 2vh;
   font-weight: 50;
@@ -62,7 +62,7 @@ body #wordle-container header::after {
   top: 0;
   left: 0;
   width: 100%;
-  height: 11%;
+  height: 11.1111111111vh;
   background-color: rgb(251, 227, 189);
   z-index: -1;
 }
@@ -73,7 +73,7 @@ body #wordle-container header::before {
   left: 0%;
   width: 100%;
   height: 35%;
-  background-color: rgb(211, 188, 168);
+  background-color: #d3bca8;
   z-index: -2;
 }
 body #game-board {
@@ -125,4 +125,10 @@ body #key-board .key {
   animation-name: pulse;
   animation-duration: 1s;
   animation-iteration-count: infinite;
+}
+
+h1.nyt-credits {
+  font-size: 1.5vh;
+  font-family: "Font Name", Helvetica, sans-serif;
+  color: rgb(6, 58, 6);
 }/*# sourceMappingURL=style.css.map */
