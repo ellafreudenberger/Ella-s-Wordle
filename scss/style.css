@@ -5,8 +5,7 @@
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
-  font-family: "Font Name", Helvetica;
+  font-family: "Font Name", Helvetica, sans-serif;
 }
 
 body {
@@ -24,11 +23,11 @@ body {
 
 header {
   font: eurostile;
-  font-size: 6vh; 
+  font-size: 6vh;
   font-weight: 50;
   background: linear-gradient(to right, #000000 0%, #694e3f 100%);
-  -webkit-background-clip: text; /* renders for Safari/Chrome. */
-  -moz-background-clip: text; /* renders for Firefox */
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
   background-clip: text;
   color: transparent;
   letter-spacing: -0.1em;
@@ -36,40 +35,38 @@ header {
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
-
-/* adding backgrround color after header so it doesn't interfere with text gradient */
 header::after {
-  content: ""; /* no content inserted*/
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 13%; 
+  height: 15%;
   background-color: rgb(237, 203, 180);
-  z-index: -1; /* places this background element under the other header elements (2020, March 1). How to Build a Wordle Clone in JavaScript. Free Code Camp. https://www.freecodecamp.org/news/build-a-wordle-clone-in-javascript/ */
+  z-index: -1;
 }
 
 #game-board {
-  margin-top: 2%; 
-  margin-bottom: 1%; 
+  margin-top: 2%;
+  margin-bottom: 1%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow-y: auto; /* enables vertical scrolling if needed */
-  height: 70%; 
+  overflow-y: auto;
+  height: 90%;
 }
 
 .letter-box {
   background-color: rgb(251, 227, 189);
-  border: 0.4vh solid rgb(238, 200, 163); 
-  margin: 0.5%; 
+  border: 0.4vh solid rgb(238, 200, 163);
+  margin: 0.5%;
   font: eurostile;
-  font-size: 4vh; 
+  font-size: 4vh;
   font-weight: 700;
   color: rgb(59, 22, 4);
-  height: 8vh; 
-  width: 8vh; 
+  height: 8vh;
+  width: 8vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,35 +77,26 @@ header::after {
 }
 
 .filled-box {
-  border: 0.3vh solid rgb(238, 200, 163); 
+  border: 0.3vh solid rgb(238, 200, 163);
 }
 
 .letter-row {
   display: flex;
 }
 
-#keyboard {
-  margin: 2vh; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#key-board {
+  display: absolute;
 }
-
-#keyboard div {
-  display: flex;
+#key-board .second-row {
+  margin: 0.5vh;
 }
-
-.second-row {
-  margin: 0.5vh; 
-}
-
-.key {
-  font-size: 2.7vh; 
+#key-board .key {
+  font-size: 1 vh;
   font-weight: 700;
   background-color: rgb(235, 228, 228);
-  padding: 2vh; 
-  margin: 0.5vh; 
+  padding: 2vh;
+  margin: 0.5vh;
   animation-name: pulse;
   animation-duration: 1s;
   animation-iteration-count: infinite;
-}
+}/*# sourceMappingURL=style.css.map */
