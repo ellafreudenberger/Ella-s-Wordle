@@ -17,18 +17,18 @@ Tip: Do not waste a guess on the same word twice in 1 game or on a word that doe
 
 Next update will include features for the game to be played on a touch screen phone. 
 
-##Installation
+Installation:
 
 Make sure you have Node.js installed, then run:
 
 ```bash
 npm install
 
-##Technologies
+Technologies:
 
 JavaScript, SASS, TypeScript and CSS
 
-##Coding Sources 
+Coding Sources:
 
 (2020, February 11). Z Index in CSS: What it Is and What it Does. Free Code Camp. https://www.freecodecamp.org/news/z-index-in-css-what-it-is-and-what-it-does/#:~:text=Z%20Index%20(%20z%2Dindex%20),%2C%20or%20position%3Afixed%20).
 
