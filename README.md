@@ -35,7 +35,7 @@ JavaScript & Sass
 
 (n.d.). How to toggle audio play() pause() with one button or link? Stack Overflow. https://stackoverflow.com/questions/27368778/how-to-toggle-audio-play-pause-with-one-button-or-link
 
-Installation:
+## Installation:
 
 Make sure you have Node.js installed, then run:
 
