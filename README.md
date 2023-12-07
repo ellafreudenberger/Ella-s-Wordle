@@ -20,7 +20,7 @@ Next update will include features for the game to be played on a touch screen ph
 
 Technologies:
 
-JavaScript & SASS
+JavaScript & Sass
 
 
 Coding Sources:
