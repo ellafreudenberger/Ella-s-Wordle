@@ -5,16 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ella's Worldle</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="scss/style.css" />
     <audio id="music" src="assets/mixkit-playful-10.mp3" autoplay loop></audio>
 </head>
 <body>   
     <div id="wordle-container">
         <header>
             <h1 class="title"> WORDLE </h1>
+            <h2> How to Play </h2> 
+            <h3 class="directions"> 
+            Guess the 5 letter word in 6 guesses. If a letter guessed results in a yellow tile, then the letter is in the wrong order of the right word answer. If a letter guessed results in a green tile, then the letter is in the correct order of the right word answer.If a letter guessed results in a red tile, then the letter is not in the right word answer. If all 5 letters guessed result in green tiles, then the right word has been guessed successfully.
+              </h3>              
         </header>
             <div id="game-board">
               </div>
+            <h1 class="nyt-credits"> A version of the New York Times daily Wordle. </h1>
             <footer>
                 <!-- (2020, February 11). Z Index in CSS: What it Is and What it Does. Free Code Camp. https://www.freecodecamp.org/news/z-index-in-css-what-it-is-and-what-it-does/#:~:text=Z%20Index%20(%20z%2Dindex%20),%2C%20or%20position%3Afixed%20). -->
               <div id="key-board"> 
@@ -53,7 +58,7 @@
                     <button class="key">Enter</button>
                 </div>
             </div>
-         </footer>
+         </footer>         
               </div>
     </div>
     <script src="js/script.js"></script> 

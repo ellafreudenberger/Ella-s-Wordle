@@ -1,0 +1,5 @@
+$large-font: 30px;
+
+@if $font-size > 30px {
+  @warn "Font size is too large. Consider using a smaller size for better readability and organization.";
+}
