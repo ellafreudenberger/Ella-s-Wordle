@@ -4,7 +4,7 @@ Design is inspired by a virtual Scrabble board with the letter-boxes resembling 
 
 The words list used to generate random words for the user to guess is imported from https://www-cs-faculty.stanford.edu/~knuth/sgb-words.txt'. The words list is a text file that is converted to a local server using npm so that the words data can be fetched and turned into an array for functional use. 
 
-User Directions: 
+## User Directions: 
 (Background music can be turned on and off with your computer spacebar) 
 
 1. Guess the 5 letter word in 6 guesses. 
@@ -18,12 +18,12 @@ Tip: Do not waste a guess on the same word twice in 1 game or on a word that doe
 Next update will include features for the game to be played on a touch screen phone. 
 
 
-Technologies:
+## Technologies:
 
 JavaScript & Sass
 
 
-Coding Sources:
+## Coding Sources:
 
 (2020, February 11). Z Index in CSS: What it Is and What it Does. Free Code Camp. https://www.freecodecamp.org/news/z-index-in-css-what-it-is-and-what-it-does/#:~:text=Z%20Index%20(%20z%2Dindex%20),%2C%20or%20position%3Afixed%20).
 
