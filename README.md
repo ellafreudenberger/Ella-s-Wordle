@@ -17,13 +17,6 @@ Tip: Do not waste a guess on the same word twice in 1 game or on a word that doe
 
 Next update will include features for the game to be played on a touch screen phone. 
 
-Installation:
-
-Make sure you have Node.js installed, then run:
-
-```bash
-npm install
-
 Technologies:
 
 JavaScript, SASS, TypeScript and CSS
@@ -39,3 +32,10 @@ Coding Sources:
 (n.d.). Java String charAt(). Java T Point. https://www.javatpoint.com/java-string-charat
 
 (n.d.). How to toggle audio play() pause() with one button or link? Stack Overflow. https://stackoverflow.com/questions/27368778/how-to-toggle-audio-play-pause-with-one-button-or-link
+
+Installation:
+
+Make sure you have Node.js installed, then run:
+
+```bash
+npm install
