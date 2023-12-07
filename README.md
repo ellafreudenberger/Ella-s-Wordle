@@ -17,9 +17,11 @@ Tip: Do not waste a guess on the same word twice in 1 game or on a word that doe
 
 Next update will include features for the game to be played on a touch screen phone. 
 
+
 Technologies:
 
-JavaScript, SASS, TypeScript and CSS
+JavaScript & SASS
+
 
 Coding Sources:
 
